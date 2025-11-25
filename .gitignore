@@ -23,3 +23,7 @@ addons/thot/Nuevo documento de texto.txt
 thot_p2p.pck
 *.dll
 *.pck
+/addons/thot/pkarr-godot-example/target
+*.apk
+*.idsig
+/.idea

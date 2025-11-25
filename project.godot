@@ -16,7 +16,7 @@ version="0.10"
 
 config/name="Thot-P2P"
 run/main_scene="uid://x4s17iniresx"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -114,3 +114,4 @@ command_terminal/logging_types=127
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

@@ -114,14 +114,17 @@ func add_server(node ,type: String, port: int, lobby: String = "webrtc_godot_4.4
 	if server == null:
 		print("Error: No se pudo instanciar el servidor de tipo", type)
 		return false
-	else:
-		server.data_received.connect(_data)
-		server.client_connected.connect(user_conect)
-		server.client_disconnected.connect(user_disconect)
+
 	if  type != "webr" and type != "iroh":
 		prints(type)
 		server.name = "server"+str(lobby)
 		node.add_child(server)
+
+		server.data_received.connect(_data)
+		server.client_connected.connect(user_conect)
+		server.client_disconnected.connect(user_disconect)
+
+
 
 		
 
@@ -214,14 +217,13 @@ func add_client(node ,type: String, ip: String, port: int, lobby: String = "webr
 	if client == null:
 		print("Error: No se pudo instanciar el cliente de tipo ", type)
 		return false
-	else:
-		client.data_received.connect(_data)
+
 		
 		
 		
 	if !type == "webr" and !type == "iroh":
 		node.add_child(client)
-
+		client.data_received.connect(_data)
 
 
 	

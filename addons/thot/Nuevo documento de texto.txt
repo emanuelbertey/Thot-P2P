@@ -1,7 +1,0 @@
-https://github.com/emagood/rust-godot-libp2p.git
-
-git submodule add --force https://github.com/emagood/rust-godot-libp2p.git addons/thot/libp2p-godot
-
-https://github.com/godotengine/webrtc-native.git
-
-git submodule add --force https://github.com/godotengine/webrtc-native.git addons/thot/webrtc-godot

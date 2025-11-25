@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bugwfwhpqfp1n"
 path.s3tc="res://.godot/imported/texture_09.png-19420819e675116f1d05792dbdb31735.s3tc.ctex"
+path.etc2="res://.godot/imported/texture_09.png-19420819e675116f1d05792dbdb31735.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/thot/example/example FPS/addons/kenney_prototype_textures/dark/texture_09.png"
-dest_files=["res://.godot/imported/texture_09.png-19420819e675116f1d05792dbdb31735.s3tc.ctex"]
+dest_files=["res://.godot/imported/texture_09.png-19420819e675116f1d05792dbdb31735.s3tc.ctex", "res://.godot/imported/texture_09.png-19420819e675116f1d05792dbdb31735.etc2.ctex"]
 
 [params]
 

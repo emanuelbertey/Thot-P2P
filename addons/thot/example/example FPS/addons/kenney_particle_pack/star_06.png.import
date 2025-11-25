@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vwob30tkwej4"
 path.s3tc="res://.godot/imported/star_06.png-e2a7e738e04930b9998f4772479e63f7.s3tc.ctex"
+path.etc2="res://.godot/imported/star_06.png-e2a7e738e04930b9998f4772479e63f7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/thot/example/example FPS/addons/kenney_particle_pack/star_06.png"
-dest_files=["res://.godot/imported/star_06.png-e2a7e738e04930b9998f4772479e63f7.s3tc.ctex"]
+dest_files=["res://.godot/imported/star_06.png-e2a7e738e04930b9998f4772479e63f7.s3tc.ctex", "res://.godot/imported/star_06.png-e2a7e738e04930b9998f4772479e63f7.etc2.ctex"]
 
 [params]
 
