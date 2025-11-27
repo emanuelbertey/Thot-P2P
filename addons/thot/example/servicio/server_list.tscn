@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0kd15tegowbr"]
+
+[ext_resource type="Script" uid="uid://d5dh55bldmwu" path="res://addons/thot/example/servicio/server_list.gd" id="1_6wr77"]
+
+[node name="derver_list" type="Control" unique_id=1923997725]
+custom_minimum_size = Vector2(150, 115)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_6wr77")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1241022250]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 113.0
+mouse_filter = 1
+color = Color(0.596078, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=533490225]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1292215146]
+custom_minimum_size = Vector2(150, 10)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1474896046]
+layout_mode = 2
+text = "quit"
+
+[node name="enviar" type="Button" parent="VBoxContainer" unique_id=14158143]
+layout_mode = 2
+text = "send"
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=36984693]
+layout_mode = 2
+text = "socket"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=234032912]
+custom_minimum_size = Vector2(150, 10)
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/enviar" to="." method="_on_enviar_pressed"]

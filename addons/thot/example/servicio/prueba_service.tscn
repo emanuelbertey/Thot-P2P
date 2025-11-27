@@ -1,0 +1,135 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsdlubcsj8trn"]
+
+[ext_resource type="Script" uid="uid://c7bitgawdn2fs" path="res://addons/thot/example/servicio/menu_service.gd" id="1_6xine"]
+
+[node name="prueba_service" type="Control" unique_id=1458730469]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu" type="Control" parent="." unique_id=879297450]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xine")
+
+[node name="LineEdit" type="LineEdit" parent="menu" unique_id=498714541]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 170.0
+offset_right = 113.563
+offset_bottom = 201.0
+text = "webr"
+placeholder_text = "type"
+max_length = 5
+
+[node name="help" type="Label" parent="menu" unique_id=906936594]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 48.0
+offset_bottom = 29.0
+text = "type
+\"udp\"
+\"tcp\"
+\"webs\"
+\"webr\"
+\"enet\""
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu" unique_id=1850643889]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 206.0
+offset_right = 251.0
+offset_bottom = 246.0
+
+[node name="ip_ws_" type="LineEdit" parent="menu/HBoxContainer" unique_id=1788470796]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "ip/ws:"
+max_length = 16
+
+[node name="port" type="LineEdit" parent="menu/HBoxContainer" unique_id=1173866433]
+layout_mode = 2
+placeholder_text = "port"
+max_length = 8
+
+[node name="server" type="Button" parent="." unique_id=1360019712]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 124.0
+offset_right = 153.0
+offset_bottom = 132.0
+text = "server"
+
+[node name="cliente" type="Button" parent="." unique_id=1582253756]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 125.0
+offset_right = 223.0
+offset_bottom = 133.0
+text = "cliente"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=515234984]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 58.0
+offset_right = 252.0
+offset_bottom = 82.0
+
+[node name="edot_msj" type="LineEdit" parent="." unique_id=630548620]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 272.0
+offset_right = 151.0
+offset_bottom = 303.0
+placeholder_text = "mensaje"
+
+[node name="enviar_smj" type="Button" parent="." unique_id=645181791]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 272.0
+offset_right = 201.0
+offset_bottom = 280.0
+text = "enviar"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1358323189]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 6.0
+offset_right = 602.0
+offset_bottom = 393.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1255708837]
+clip_contents = true
+layout_mode = 2
+size_flags_stretch_ratio = 12.21
+
+[node name="Edit" type="TextEdit" parent="PanelContainer/HBoxContainer" unique_id=2050697848]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+scroll_smooth = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer" unique_id=942539226]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/HBoxContainer/ScrollContainer" unique_id=699940]
+layout_mode = 2
+alignment = 1
+
+[connection signal="pressed" from="server" to="menu" method="_on_server_pressed"]
+[connection signal="pressed" from="cliente" to="menu" method="_on_cliente_pressed"]
+[connection signal="toggled" from="CheckButton" to="menu" method="_on_check_button_toggled"]

@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctst0jru07nvp"]
+
+[ext_resource type="Script" uid="uid://bh3h7bkgka7cx" path="res://addons/thot/torrent/track_udp.gd" id="1_uf6a1"]
+
+[node name="torrent" type="Control" unique_id=1539445634]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uf6a1")
+udplink = "open.demonoid.ch"
+hash = "7b6cae55db21441f06ea00a25c2a21e11752eee2"
+
+[node name="enter hash" type="LineEdit" parent="." unique_id=495900291]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 87.0
+offset_right = 439.0
+offset_bottom = 118.0
+text = "7b6cae55db21441f06ea00a25c2a21e11752eee2"
+placeholder_text = "info hash v1"
+alignment = 1
+
+[node name="info" type="Label" parent="." unique_id=972585804]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 57.0
+offset_right = 202.0
+offset_bottom = 80.0
+text = "info hash"
+
+[node name="send" type="Button" parent="." unique_id=95323725]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 217.0
+offset_right = 222.0
+offset_bottom = 253.0
+text = "send"
+
+[node name="url-udp" type="LineEdit" parent="." unique_id=1738717832]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 158.0
+offset_right = 359.0
+offset_bottom = 189.0
+text = "open.demonoid.ch"
+placeholder_text = "url udp"
+
+[node name="port" type="LineEdit" parent="url-udp" unique_id=1038126227]
+layout_mode = 0
+offset_left = 190.0
+offset_top = -32.0
+offset_right = 295.0
+offset_bottom = -1.0
+text = "6969"
+placeholder_text = "port"
+
+[node name="url tracker" type="Label" parent="." unique_id=675952870]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 129.0
+offset_right = 198.0
+offset_bottom = 152.0
+text = "url tracker udp + port"
+
+[node name="url resolve ip" type="Label" parent="." unique_id=2028903930]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 164.0
+offset_right = 497.0
+offset_bottom = 187.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1955081071]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 16.0
+offset_right = 785.0
+offset_bottom = 496.0
+
+[node name="info tracker" type="Label" parent="ScrollContainer" unique_id=986908279]
+layout_mode = 2
+text = "respuesta :
+"
+autowrap_mode = 2
+justification_flags = 35
+
+[connection signal="pressed" from="send" to="." method="_on_send_pressed"]

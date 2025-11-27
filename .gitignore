@@ -27,3 +27,4 @@ thot_p2p.pck
 *.apk
 *.idsig
 /.idea
+*.uid

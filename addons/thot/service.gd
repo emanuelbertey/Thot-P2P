@@ -191,21 +191,21 @@ func add_client(node ,type: String, ip: String, port: int, lobby: String = "webr
 			
 		ConnectionType.WEBRTC:
 
-			var runner_scene := preload("res://addons/thot/scenes/main.tscn")
-			var runner = runner_scene.instantiate()
-			runner.lobby = lobby
-			runner.is_server = false
-			#var current_scene := get_tree().get_current_scene()
-			#if current_scene == null:
-				#push_error("No hay escena activa para ejecutar UPNP")
+			#var runner_scene := preload("res://addons/thot/scenes/main.tscn")
+			#var runner = runner_scene.instantiate()
+			#runner.lobby = lobby
+			#runner.is_server = false
+			##var current_scene := get_tree().get_current_scene()
+			##if current_scene == null:
+				##push_error("No hay escena activa para ejecutar UPNP")
 			prints("runer run ")
 
 			#runner.hotok = false
-			runner.visible = false
-			node.add_child(runner)
-			
-			client = runner
-			
+			#runner.visible = false
+			#node.add_child(runner)
+			#
+			#client = runner
+			#
 			#client = webrtc.new("*", port, lobby, false)
 			prints("desde cliente webr : ",  lobby)
 		ConnectionType.ENET:

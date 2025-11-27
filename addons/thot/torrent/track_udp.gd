@@ -1,6 +1,7 @@
 extends Control
 @export var udplink := ""
-@export var portudp := 6969
+@export  var portudp := 6969
+@export var hash := ""
 var test = 0
 #⛔✅🧩📦🔍❌
 
@@ -8,7 +9,7 @@ var udp := PacketPeerUDP.new()
 var transaction_id := 0
 var connection_id := 0
 
-func _ready():
+func tracker_go():
 	#Peer:0:0:0:0:0:ffff:be85:71d5 # PORT 6881 Peer:0:0:0:0:0:ffff:b9d1:c79f # PORT 55000 Peer:0:0:0:0:0:ffff:8ac7:785 # PORT 39965
 	
 	#prints(ipv6_real("0:0:0:0:0:ffff:be85:71d5"))
@@ -71,7 +72,7 @@ func send_announce():
 #
 	#
 	#var info_hash := hex_to_bytes("0123456789abcdef0123456789abcdef01234567")  # 20 bytes
-	var info_hash := hex_to_bytes("d2474e86c95b19b8bcfdb92bc12c9d44667cfa36")  # Ubuntu ISO
+	var info_hash = hex_to_bytes(hash)  # Ubuntu ISO
 #18bc69892a5a546143ade969e3858d6b41089b8d   # 20 bytes
 #"d2474e86c95b19b8bcfdb92bc12c9d44667cfa36"
 	var peer_id = "GODOT-PEER-00000001"
@@ -121,6 +122,7 @@ func send_announce():
 	await get_tree().create_timer(1.0).timeout
 	if udp.get_available_packet_count() > 0:
 		var response := udp.get_packet()
+		prints("responde : " , response)
 		if response.size() >= 20:
 			var action := from_bytes(response.slice(0, 4))
 			var trans_id := from_bytes(response.slice(4, 8))
@@ -128,34 +130,56 @@ func send_announce():
 			var leechers := from_bytes(response.slice(12, 16))
 			var seeders := from_bytes(response.slice(16, 20))
 			print("✅ ANNOUNCE OK. Interval:", interval, " Seeders:", seeders, " Leechers:", leechers)
-#
+			$ScrollContainer/"info tracker".text += "✅ ANNOUNCE OK. Interval:" + str(interval / 60 ) + " - Leechers: "  + str(leechers) + " seeders : " + str(seeders)
+			$ScrollContainer/"info tracker".text += "
+			
+			"
 			var peers := response.slice(20)
 			var i := 0
+			prints(peers.size() , "tamaño del peer packete")
+			$ScrollContainer/"info tracker".text += " tamaño del packete : " + str(peers.size()) + "\n"
 			while i < peers.size():
 				var remaining := peers.size() - i
 				var peer_ip := ""
 				var peer_port := 0
 
-				if remaining >= 18:
-					# IPv6: 16 bytes IP + 2 bytes puerto
-					var ip_bytes := peers.slice(i, i + 16)
-					var ip_parts := []
-					for j in range(0, 16, 2):
-						var part := (ip_bytes[j] << 8) | ip_bytes[j + 1]
-						ip_parts.append("%x" % part)
-					peer_ip = ":".join(ip_parts)
-					peer_port = (peers[i + 16] << 8) | peers[i + 17]
-					i += 18
-				elif remaining >= 6:
+
+		#if remaining >= 18:
+					## IPv6: 16 bytes IP + 2 bytes puerto
+					#var ip_bytes := peers.slice(i, i + 16)
+					#var ip_parts := []
+					#for j in range(0, 16, 2):
+						#var part := (ip_bytes[j] << 8) | ip_bytes[j + 1]
+						#ip_parts.append("%x" % part)
+					#peer_ip = ":".join(ip_parts)
+					#peer_port = (peers[i + 16] << 8) | peers[i + 17]
+					#i += 18
+#
+
+
+
+
+				if remaining >= 6:#elif 
 					# IPv4: 4 bytes IP + 2 bytes puerto
 					peer_ip = "%d.%d.%d.%d" % [peers[i], peers[i+1], peers[i+2], peers[i+3]]
 					peer_port = (peers[i+4] << 8) | peers[i+5]
 					i += 6
+					$"ScrollContainer/info tracker".text += " Peer " + str(peer_ip) + " port : " + str(peer_port)  + "\n "
+					print("Peer:", peer_ip, " # PORT ", peer_port)
+					prints("es ipv4 en ipv6 " ,ipv6_real( peer_ip))
+				#
 				else:
 					push_warning("Bloque incompleto: %d bytes restantes no válidos" % remaining)
 					break
-
-				print("Peer:", peer_ip, " # PORT ", peer_port)
+					
+					
+				#remaining >= 6#elif 
+				## IPv4: 4 bytes IP + 2 bytes puerto
+				#peer_ip = "%d.%d.%d.%d" % [peers[i], peers[i+1], peers[i+2], peers[i+3]]
+				#peer_port = (peers[i+4] << 8) | peers[i+5]
+				#i += 6
+				#$"info tracker".text += " Peer " + str(peer_ip) + " port : " + str(peer_port)
+				print("Peer FINAL:", peer_ip, " # PORT ", peer_port)
 				prints("es ipv4 en ipv6 " ,ipv6_real( peer_ip))
 			#
 			#for i in range(0, peers.size(), 6):
@@ -218,3 +242,8 @@ func ipv6_real(ipv6: String) -> String:
 	prints("✅ IPv4 resultante:", ipv4)
 
 	return ipv4
+
+
+func _on_send_pressed() -> void:
+	tracker_go()
+	pass # Replace with function body.

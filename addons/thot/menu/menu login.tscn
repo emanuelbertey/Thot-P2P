@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://dvdidnkl0k2qq"]
+
+[node name="menu" type="Control" unique_id=1400972900]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=595367154]
+follow_viewport_enabled = true
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=177624154]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 378.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.96)
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer" unique_id=1282923052]
+layout_mode = 2
+flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer" unique_id=246286058]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1531952955]
+custom_minimum_size = Vector2(2.29, 21.135)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1833228817]
+layout_mode = 2
+text = "new game"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=208812699]
+custom_minimum_size = Vector2(2.29, 21.135)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=493228767]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=406220673]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+text = "user"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1807295647]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=392992325]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.65
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=411430004]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.08
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1848596869]
+custom_minimum_size = Vector2(2.29, 21.135)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1054301395]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=510029484]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+text = "pass"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=1393139774]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=1954152264]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.65
+alignment = 1
+secret = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=144529312]
+custom_minimum_size = Vector2(0.1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.08
+
+[node name="MarginContainer4" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=544501348]
+custom_minimum_size = Vector2(2.29, 21.135)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=943936364]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=60692780]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+text = "ip *"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=1669216586]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=1212497584]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.65
+alignment = 1
+secret = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer4" unique_id=734269232]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.08
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer" unique_id=1042267041]
+layout_mode = 2
+alignment = 1
+
+[node name="salir" type="TouchScreenButton" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=571648078]
+position = Vector2(392, 119.75)
+scale = Vector2(0.4, 0.4)
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/salir" unique_id=176569524]
+offset_left = 87.5
+offset_top = 29.9999
+offset_right = 125.5
+offset_bottom = 52.9999
+text = "salir"
+
+[node name="login" type="TouchScreenButton" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=478269801]
+position = Vector2(541, 120.792)
+scale = Vector2(0.4, 0.4)
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/login" unique_id=1162688219]
+offset_left = 87.5
+offset_top = 29.9999
+offset_right = 125.5
+offset_bottom = 52.9999
+text = "login"
+
+[node name="regresar" type="TouchScreenButton" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=495433257]
+position = Vector2(682, 117.667)
+scale = Vector2(0.4, 0.4)
+
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/regresar" unique_id=1251246728]
+offset_left = 79.9998
+offset_top = 27.4999
+offset_right = 140.0
+offset_bottom = 50.4999
+text = "registre"
+
+[node name="server" type="TouchScreenButton" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1235204883]
+position = Vector2(254, 120.708)
+scale = Vector2(0.4, 0.4)
+
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/server" unique_id=670898673]
+offset_left = 79.9998
+offset_top = 27.4999
+offset_right = 140.0
+offset_bottom = 50.4999
+text = "server"
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/regresar" to="." method="_on_regresar_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/HBoxContainer/server" to="." method="_on_server_pressed"]

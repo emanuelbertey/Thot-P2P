@@ -63,12 +63,12 @@ func _on_button_2_pressed() -> void:
 	for byte in key:
 		packed_key.append(byte)
 	
-	if peer.prepare_packet(str($clave.text),str($valor.text),mode , relays,packed_key):
-		$publicar.text = "publicado "
-	else:
-		prints("error")
-		$publicar.text = "error publicado "
-	
+	#if peer.prepare_packet(str($clave.text),str($valor.text),mode , relays,packed_key):
+		#$publicar.text = "publicado "
+	#else:
+		#prints("error")
+		#$publicar.text = "error publicado "
+	#
 	
 
 

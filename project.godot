@@ -16,7 +16,7 @@ version="0.10"
 
 config/name="Thot-P2P"
 run/main_scene="uid://x4s17iniresx"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]

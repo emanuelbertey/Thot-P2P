@@ -1,0 +1,166 @@
+[gd_scene load_steps=8 format=3 uid="uid://x4s17iniresx"]
+
+[ext_resource type="Script" uid="uid://c651cp01ol4wx" path="res://addons/thot/example/main ThotP2P/pruebas_thot_p_2p.gd" id="1_amom4"]
+[ext_resource type="Texture2D" uid="uid://cmv4dyu6hew1u" path="res://addons/thot/example/example FPS/addons/kenney_prototype_textures/purple/texture_04.png" id="2_rwh5o"]
+[ext_resource type="Texture2D" uid="uid://cy7fcyk1u33qa" path="res://screenshots/dfr2.PNG" id="3_amom4"]
+[ext_resource type="Texture2D" uid="uid://bwm52fxkasxdn" path="res://screenshots/dfr.PNG" id="4_rwh5o"]
+[ext_resource type="Texture2D" uid="uid://b2ijor1wqiqfj" path="res://screenshots/dfr3.PNG" id="5_tigdo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amom4"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.454902, 0.560784, 0.929412, 1)
+border_width_left = 4
+border_width_top = 6
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0.137255, 0.823529, 0.929412, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_top = 8.0
+expand_margin_bottom = 17.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwh5o"]
+bg_color = Color(0.307607, 0.657077, 0.729874, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color(0.517847, 0.858605, 0.956577, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 7
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 7
+expand_margin_left = 2.0
+expand_margin_top = 10.0
+expand_margin_right = 1.0
+expand_margin_bottom = 16.0
+
+[node name="pruebas thot p2p" type="Control" unique_id=1984227315]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_amom4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2059351059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rwh5o")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1768148960]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 464.0
+offset_bottom = 267.0
+
+[node name="Panel" type="Panel" parent="GridContainer" unique_id=1542885523]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_amom4")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel" unique_id=299339813]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 10.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.955, 1.005)
+texture = ExtResource("3_amom4")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="GridContainer/Panel" unique_id=874631009]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "multiplayer fps"
+
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer" unique_id=1947649268]
+custom_minimum_size = Vector2(23, 23)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="GridContainer" unique_id=1217992287]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rwh5o")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel2" unique_id=1678801703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 12.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.95, 1)
+texture = ExtResource("4_rwh5o")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="GridContainer/Panel2" unique_id=2110587954]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "test service"
+
+[node name="MarginContainer2" type="MarginContainer" parent="GridContainer" unique_id=1228788917]
+custom_minimum_size = Vector2(23, 23)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="GridContainer" unique_id=1309140834]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rwh5o")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel3" unique_id=1057603801]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 12.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.95, 1)
+texture = ExtResource("5_tigdo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="chat" type="Button" parent="GridContainer/Panel3" unique_id=1269864440]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "test chat"
+
+[connection signal="pressed" from="GridContainer/Panel/Button" to="." method="_on_button_pressed_fps"]
+[connection signal="pressed" from="GridContainer/Panel2/Button" to="." method="_on_button_pressed_service"]
+[connection signal="pressed" from="GridContainer/Panel3/chat" to="." method="_on_chat_pressed"]
