@@ -28,3 +28,4 @@ thot_p2p.pck
 *.idsig
 /.idea
 *.uid
+/test

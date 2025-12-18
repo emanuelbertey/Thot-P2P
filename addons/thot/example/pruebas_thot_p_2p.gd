@@ -34,3 +34,14 @@ func _on_chat_pressed() -> void:
 	prints("⭐️ DATOS AL NODO INSTANCIADO ⭐️" )
 
 	pass # Replace with function body.
+
+
+func _on_torrent_udp_pressed() -> void:
+	var data_exten = load("res://addons/thot/torrent/torrent.tscn").instantiate()
+
+	self.add_child(data_exten)
+	$GridContainer.queue_free()
+	$TextureRect.queue_free()
+	prints("⭐️ DATOS AL NODO INSTANCIADO ⭐️" )
+
+	pass # Replace with function body.

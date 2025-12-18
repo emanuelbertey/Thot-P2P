@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://x4s17iniresx"]
+[gd_scene format=3 uid="uid://x4s17iniresx"]
 
 [ext_resource type="Script" uid="uid://c651cp01ol4wx" path="res://addons/thot/example/pruebas_thot_p_2p.gd" id="1_amom4"]
 [ext_resource type="Texture2D" uid="uid://cmv4dyu6hew1u" path="res://addons/thot/example/example FPS/addons/kenney_prototype_textures/purple/texture_04.png" id="2_rwh5o"]
 [ext_resource type="Texture2D" uid="uid://cy7fcyk1u33qa" path="res://screenshots/dfr2.PNG" id="3_amom4"]
 [ext_resource type="Texture2D" uid="uid://bwm52fxkasxdn" path="res://screenshots/dfr.PNG" id="4_rwh5o"]
 [ext_resource type="Texture2D" uid="uid://b2ijor1wqiqfj" path="res://screenshots/dfr3.PNG" id="5_tigdo"]
+[ext_resource type="Texture2D" uid="uid://cugjecsoboch0" path="res://screenshots/dfr4.PNG" id="6_oc1bn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amom4"]
 content_margin_left = 0.0
@@ -40,7 +41,7 @@ expand_margin_top = 10.0
 expand_margin_right = 1.0
 expand_margin_bottom = 16.0
 
-[node name="pruebas thot p2p" type="Control" unique_id=1984227315]
+[node name="pruebas thot p2p" type="Control" unique_id=2132486254]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,7 +51,7 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_amom4")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2059351059]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1261177490]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,20 +61,20 @@ grow_vertical = 2
 texture = ExtResource("2_rwh5o")
 expand_mode = 1
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1768148960]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=798426264]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 13.0
 offset_right = 464.0
 offset_bottom = 267.0
 
-[node name="Panel" type="Panel" parent="GridContainer" unique_id=1542885523]
+[node name="Panel" type="Panel" parent="GridContainer" unique_id=116906115]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_amom4")
 
-[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel" unique_id=299339813]
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel" unique_id=2034704549]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,32 +90,32 @@ texture = ExtResource("3_amom4")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Button" type="Button" parent="GridContainer/Panel" unique_id=874631009]
+[node name="Button" type="Button" parent="GridContainer/Panel" unique_id=758975384]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "multiplayer fps"
 
-[node name="MarginContainer" type="MarginContainer" parent="GridContainer" unique_id=1947649268]
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer" unique_id=1683227296]
 custom_minimum_size = Vector2(23, 23)
 layout_mode = 2
 
-[node name="Panel2" type="Panel" parent="GridContainer" unique_id=1217992287]
+[node name="Panel2" type="Panel" parent="GridContainer" unique_id=2076142673]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rwh5o")
 
-[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel2" unique_id=1678801703]
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel2" unique_id=1002879995]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 12.0
-offset_top = 6.0
+offset_top = -4.0
 offset_right = 12.0
-offset_bottom = 6.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.95, 1)
@@ -122,32 +123,32 @@ texture = ExtResource("4_rwh5o")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Button" type="Button" parent="GridContainer/Panel2" unique_id=2110587954]
+[node name="Button" type="Button" parent="GridContainer/Panel2" unique_id=2066975210]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-text = "test service"
+text = "test service (old)"
 
-[node name="MarginContainer2" type="MarginContainer" parent="GridContainer" unique_id=1228788917]
+[node name="MarginContainer2" type="MarginContainer" parent="GridContainer" unique_id=1554519525]
 custom_minimum_size = Vector2(23, 23)
 layout_mode = 2
 
-[node name="Panel3" type="Panel" parent="GridContainer" unique_id=1309140834]
+[node name="Panel3" type="Panel" parent="GridContainer" unique_id=99766504]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rwh5o")
 
-[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel3" unique_id=1057603801]
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel3" unique_id=957815712]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 12.0
-offset_top = 6.0
+offset_top = -3.0
 offset_right = 12.0
-offset_bottom = 6.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.95, 1)
@@ -155,12 +156,45 @@ texture = ExtResource("5_tigdo")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="chat" type="Button" parent="GridContainer/Panel3" unique_id=1269864440]
+[node name="chat" type="Button" parent="GridContainer/Panel3" unique_id=1505696129]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-text = "test chat"
+text = "test chat iroh"
+
+[node name="MarginContainer3" type="MarginContainer" parent="GridContainer" unique_id=651270314]
+custom_minimum_size = Vector2(23, 23)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="GridContainer" unique_id=1012124141]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rwh5o")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel4" unique_id=1571407775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = 12.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.95, 1)
+texture = ExtResource("6_oc1bn")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="torrent udp" type="Button" parent="GridContainer/Panel4" unique_id=628022114]
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 31.0
+text = "test torrent udp (old) "
 
 [connection signal="pressed" from="GridContainer/Panel/Button" to="." method="_on_button_pressed_fps"]
 [connection signal="pressed" from="GridContainer/Panel2/Button" to="." method="_on_button_pressed_service"]
 [connection signal="pressed" from="GridContainer/Panel3/chat" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="GridContainer/Panel4/torrent udp" to="." method="_on_torrent_udp_pressed"]

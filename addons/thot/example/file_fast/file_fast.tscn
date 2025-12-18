@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://c6x7p5m4k3j21"]
+
+[ext_resource type="Script" uid="uid://b775wy8h5f50h" path="res://addons/thot/example/file_fast/file_fast.gd" id="1_script"]
+
+[node name="FileFast" type="Control" unique_id=472863131]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="MainVbox" type="VBoxContainer" parent="." unique_id=903072277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TopBar" type="HBoxContainer" parent="MainVbox" unique_id=1543899167]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="MainVbox/TopBar" unique_id=1867190222]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "FILE FAST PRO"
+
+[node name="TicketLabel" type="Label" parent="MainVbox/TopBar" unique_id=376824835]
+layout_mode = 2
+text = " | Ticket:"
+
+[node name="ConnStringDisplay" type="Label" parent="MainVbox/TopBar" unique_id=2101060276]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Not Connected"
+clip_text = true
+
+[node name="CopyTicket" type="Button" parent="MainVbox/TopBar" unique_id=677173938]
+layout_mode = 2
+text = "Copy"
+
+[node name="SettingsButton" type="Button" parent="MainVbox/TopBar" unique_id=2003893959]
+layout_mode = 2
+text = "⚙ Settings"
+
+[node name="HSeparator" type="HSeparator" parent="MainVbox" unique_id=822609560]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="MainVbox" unique_id=591762458]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="SendSection" type="VBoxContainer" parent="MainVbox/HBox" unique_id=1189742824]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MainVbox/HBox/SendSection" unique_id=1444237101]
+layout_mode = 2
+text = "📤 My Shared Workspace"
+horizontal_alignment = 1
+
+[node name="PathHeader" type="HBoxContainer" parent="MainVbox/HBox/SendSection" unique_id=1725576580]
+layout_mode = 2
+
+[node name="BackBtn" type="Button" parent="MainVbox/HBox/SendSection/PathHeader" unique_id=1687501359]
+layout_mode = 2
+text = " ⬅ Back "
+
+[node name="PathLabel" type="Label" parent="MainVbox/HBox/SendSection/PathHeader" unique_id=582673427]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Local: /"
+clip_text = true
+
+[node name="BtnBox" type="HBoxContainer" parent="MainVbox/HBox/SendSection" unique_id=1830613992]
+layout_mode = 2
+alignment = 1
+
+[node name="AddFiles" type="Button" parent="MainVbox/HBox/SendSection/BtnBox" unique_id=940792956]
+layout_mode = 2
+text = "Add Files"
+
+[node name="AddFolder" type="Button" parent="MainVbox/HBox/SendSection/BtnBox" unique_id=1068027828]
+layout_mode = 2
+text = "Add Folder"
+
+[node name="Scroll" type="ScrollContainer" parent="MainVbox/HBox/SendSection" unique_id=1436127340]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SendList" type="VBoxContainer" parent="MainVbox/HBox/SendSection/Scroll" unique_id=1817678894]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SendOffer" type="Button" parent="MainVbox/HBox/SendSection" unique_id=4223534]
+layout_mode = 2
+text = "Sync Offer with Peers"
+
+[node name="ReceiveSection" type="VBoxContainer" parent="MainVbox/HBox" unique_id=238252597]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MainVbox/HBox/ReceiveSection" unique_id=1577688816]
+layout_mode = 2
+text = "📥 Virtual Remote Browser"
+horizontal_alignment = 1
+
+[node name="PathHeader" type="HBoxContainer" parent="MainVbox/HBox/ReceiveSection" unique_id=325229336]
+layout_mode = 2
+
+[node name="BackBtn" type="Button" parent="MainVbox/HBox/ReceiveSection/PathHeader" unique_id=756666052]
+layout_mode = 2
+text = " ⬅ Back "
+
+[node name="PathLabel" type="Label" parent="MainVbox/HBox/ReceiveSection/PathHeader" unique_id=1690814879]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Remote: /"
+clip_text = true
+
+[node name="Scroll" type="ScrollContainer" parent="MainVbox/HBox/ReceiveSection" unique_id=1615340302]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ReceiveList" type="VBoxContainer" parent="MainVbox/HBox/ReceiveSection/Scroll" unique_id=294572979]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnBox" type="HBoxContainer" parent="MainVbox/HBox/ReceiveSection" unique_id=920193816]
+layout_mode = 2
+
+[node name="DownloadSelected" type="Button" parent="MainVbox/HBox/ReceiveSection/BtnBox" unique_id=1759468103]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Download Selected"
+
+[node name="RequestSync" type="Button" parent="MainVbox/HBox/ReceiveSection/BtnBox" unique_id=1158204750]
+layout_mode = 2
+text = " 🔄 Sync "
+
+[node name="StatusLabel" type="Label" parent="MainVbox" unique_id=434963093]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.701961, 0.701961, 1)
+text = "System Ready"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinOverlay" type="Panel" parent="MainVbox" unique_id=1924334198]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="MainVbox/JoinOverlay" unique_id=1145064230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Host" type="Button" parent="MainVbox/JoinOverlay/VBox" unique_id=643789412]
+layout_mode = 2
+text = "START AS HOST"
+
+[node name="Label" type="Label" parent="MainVbox/JoinOverlay/VBox" unique_id=56185057]
+layout_mode = 2
+text = "- OR -"
+horizontal_alignment = 1
+
+[node name="TicketInput" type="LineEdit" parent="MainVbox/JoinOverlay/VBox" unique_id=2079176036]
+layout_mode = 2
+placeholder_text = "Paste Peer Ticket here..."
+
+[node name="Join" type="Button" parent="MainVbox/JoinOverlay/VBox" unique_id=1927645907]
+layout_mode = 2
+text = "JOIN PEER"
+
+[node name="SettingsPanel" type="PanelContainer" parent="." unique_id=338656796]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="SettingsPanel" unique_id=1155173351]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="SettingsPanel/VBox" unique_id=2077632301]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="PathLabel" type="Label" parent="SettingsPanel/VBox" unique_id=1207881346]
+layout_mode = 2
+text = "Save to: Not Set"
+autowrap_mode = 3
+
+[node name="ChangePath" type="Button" parent="SettingsPanel/VBox" unique_id=932470051]
+layout_mode = 2
+text = "Change Save Folder"
+
+[node name="ClearHistory" type="Button" parent="SettingsPanel/VBox" unique_id=306208139]
+layout_mode = 2
+text = "Clear Download History"
+
+[node name="CloseSettings" type="Button" parent="SettingsPanel/VBox" unique_id=770540044]
+layout_mode = 2
+text = "Close"
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1235246467]
+title = "Select Resource"
+size = Vector2i(700, 500)
+ok_button_text = "Select"
+access = 2
+
+[node name="SaveDialog" type="FileDialog" parent="." unique_id=963023242]
+title = "Open a Directory"
+size = Vector2i(700, 500)
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+
+[connection signal="pressed" from="MainVbox/TopBar/CopyTicket" to="." method="_on_copy_ticket_pressed"]
+[connection signal="pressed" from="MainVbox/TopBar/SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainVbox/HBox/SendSection/BtnBox/AddFiles" to="." method="_on_add_files_pressed"]
+[connection signal="pressed" from="MainVbox/HBox/SendSection/BtnBox/AddFolder" to="." method="_on_add_folder_pressed"]
+[connection signal="pressed" from="MainVbox/HBox/SendSection/SendOffer" to="." method="_on_send_offer_pressed"]
+[connection signal="pressed" from="MainVbox/HBox/ReceiveSection/BtnBox/DownloadSelected" to="." method="_on_download_selected_pressed"]
+[connection signal="pressed" from="MainVbox/HBox/ReceiveSection/BtnBox/RequestSync" to="." method="_on_request_sync_pressed"]
+[connection signal="pressed" from="MainVbox/JoinOverlay/VBox/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="MainVbox/JoinOverlay/VBox/Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="SettingsPanel/VBox/ChangePath" to="." method="_on_change_folder_pressed"]
+[connection signal="pressed" from="SettingsPanel/VBox/ClearHistory" to="." method="_on_clear_history_pressed"]
+[connection signal="pressed" from="SettingsPanel/VBox/CloseSettings" to="." method="_on_close_settings_pressed"]
+[connection signal="dir_selected" from="FileDialog" to="." method="_on_file_dialog_selected"]
+[connection signal="files_selected" from="FileDialog" to="." method="_on_file_dialog_selected"]
+[connection signal="dir_selected" from="SaveDialog" to="." method="_on_save_dir_selected"]

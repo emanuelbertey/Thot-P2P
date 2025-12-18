@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bh3h7bkgka7cx" path="res://addons/thot/torrent/track_udp.gd" id="1_uf6a1"]
 
-[node name="torrent" type="Control" unique_id=1539445634]
+[node name="torrent" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ script = ExtResource("1_uf6a1")
 udplink = "open.demonoid.ch"
 hash = "7b6cae55db21441f06ea00a25c2a21e11752eee2"
 
-[node name="enter hash" type="LineEdit" parent="." unique_id=495900291]
+[node name="enter hash" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 87.0
@@ -23,7 +23,7 @@ text = "7b6cae55db21441f06ea00a25c2a21e11752eee2"
 placeholder_text = "info hash v1"
 alignment = 1
 
-[node name="info" type="Label" parent="." unique_id=972585804]
+[node name="info" type="Label" parent="."]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 57.0
@@ -31,7 +31,7 @@ offset_right = 202.0
 offset_bottom = 80.0
 text = "info hash"
 
-[node name="send" type="Button" parent="." unique_id=95323725]
+[node name="send" type="Button" parent="."]
 layout_mode = 0
 offset_left = 59.0
 offset_top = 217.0
@@ -39,7 +39,7 @@ offset_right = 222.0
 offset_bottom = 253.0
 text = "send"
 
-[node name="url-udp" type="LineEdit" parent="." unique_id=1738717832]
+[node name="url-udp" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 55.0
 offset_top = 158.0
@@ -48,7 +48,7 @@ offset_bottom = 189.0
 text = "open.demonoid.ch"
 placeholder_text = "url udp"
 
-[node name="port" type="LineEdit" parent="url-udp" unique_id=1038126227]
+[node name="port" type="LineEdit" parent="url-udp"]
 layout_mode = 0
 offset_left = 190.0
 offset_top = -32.0
@@ -57,7 +57,7 @@ offset_bottom = -1.0
 text = "6969"
 placeholder_text = "port"
 
-[node name="url tracker" type="Label" parent="." unique_id=675952870]
+[node name="url tracker" type="Label" parent="."]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 129.0
@@ -65,21 +65,21 @@ offset_right = 198.0
 offset_bottom = 152.0
 text = "url tracker udp + port"
 
-[node name="url resolve ip" type="Label" parent="." unique_id=2028903930]
+[node name="url resolve ip" type="Label" parent="."]
 layout_mode = 0
 offset_left = 381.0
 offset_top = 164.0
 offset_right = 497.0
 offset_bottom = 187.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1955081071]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 553.0
 offset_top = 16.0
 offset_right = 785.0
 offset_bottom = 496.0
 
-[node name="info tracker" type="Label" parent="ScrollContainer" unique_id=986908279]
+[node name="info tracker" type="Label" parent="ScrollContainer"]
 layout_mode = 2
 text = "respuesta :
 "
