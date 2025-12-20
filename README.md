@@ -1,55 +1,81 @@
-# P2P Communication App with Godot 4.4
+# Aplicación de Comunicación P2P con Godot 4.4  
+# P2P Communication App with Godot 4.4  
 
-## Thot-P2P## DescriptionThis application allows P2P (Peer-to-Peer) communication between devices using different implementation methods in Godot 4.4: ENet, WebSocket, and tcp, udp, libp2p, nostr. Its main goal is to connect devices and exchange information, data, or messages.
+## Thot-P2P  
 
-## Features
-- **P2P Connections**: Support for P2P connections using ENet, WebSocket, webrtc, and TCP, UDP, and in beta libp2p, torrent, nostr.
-- **Information Exchange**: Allows sending and receiving messages between two connected devices.
-- **Modular Implementation**: Each connection method is implemented as an independent module, making it easy to use and modify.
+### Descripción / Description
+Esta aplicación permite la comunicación **P2P (Peer-to-Peer)** entre dispositivos utilizando diferentes métodos en Godot 4.4: **ENet, WebSocket, TCP, UDP, libp2p y nostr**.  
+Su objetivo principal es conectar dispositivos y facilitar el intercambio de información, datos o mensajes.  
 
-## Requisitos
+This application enables **Peer-to-Peer (P2P)** communication between devices using different methods in Godot 4.4: **ENet, WebSocket, TCP, UDP, libp2p, and nostr**.  
+Its main goal is to connect devices and facilitate the exchange of information, data, or messages.  
 
-- Godot Engine 4.4 o superior.
-- Conexión a Internet y/o lolcalhost , ipv 4/6.
-- Dos dispositivos compatibles con Godot (pueden ser ordenadores, smartphones, etc.).
+---
 
-## Métodos de Conexión
+### Características / Features
+- **Conexiones P2P**: Soporte para ENet, WebSocket, WebRTC, TCP, UDP y en beta libp2p, torrent y nostr.  
+- **Intercambio de Información**: Permite enviar y recibir mensajes entre dos dispositivos conectados.  
+- **Implementación Modular**: Cada método de conexión está implementado como un módulo independiente.  
+
+- **P2P Connections**: Support for ENet, WebSocket, WebRTC, TCP, UDP, and in beta libp2p, torrent, and nostr.  
+- **Information Exchange**: Allows sending and receiving messages between two connected devices.  
+- **Modular Implementation**: Each connection method is implemented as an independent module.  
+
+---
+
+### Requisitos / Requirements
+- Godot Engine 4.4 o superior.  
+- Conexión a Internet y/o localhost, IPv4/IPv6.  
+- Dos dispositivos compatibles con Godot.  
+
+- Godot Engine 4.4 or higher.  
+- Internet connection and/or localhost, IPv4/IPv6.  
+- Two devices compatible with Godot.  
+
+---
+
+## Métodos de Conexión / Connection Methods
 
 ### ENet
+ENet es una biblioteca confiable para comunicación en tiempo real.  
+Ideal para juegos en línea, chats en tiempo real y transferencia de archivos pequeños.  
 
-ENet es una biblioteca de red confiable para la comunicación en tiempo real.
-Es ideal para aplicaciones que requieren baja latencia y alta confiabilidad.
-- Juegos en línea que necesitan comunicación en tiempo real con baja latencia.
-- Aplicaciones de chat en tiempo real.
-- Transferencia de archivos pequeños en redes locales.
+ENet is a reliable networking library for real-time communication.  
+Ideal for online games, real-time chats, and small file transfers.  
 
-### WebSocket and webrtc
+### WebSocket y WebRTC / WebSocket and WebRTC
+Proporcionan comunicación bidireccional sobre una sola conexión TCP.  
+Perfecto para aplicaciones web interactivas, juegos multijugador en navegador e IoT.  
 
-WebSocket proporciona una comunicación bidireccional a través de una sola conexión TCP.
-Es ideal para aplicaciones basadas en web que requieren una comunicación en tiempo real.
-- Aplicaciones web interactivas que necesitan actualizaciones en tiempo real, como chats y colaboración en línea.
-- Juegos multijugador basados en navegador.
-- Aplicaciones IoT que requieren comunicación constante con un servidor web.
+Provide bidirectional communication over a single TCP connection.  
+Perfect for interactive web apps, browser-based multiplayer games, and IoT.  
 
-### TCP , UDP
+### TCP y UDP / TCP and UDP
+TCP es confiable y sencillo de implementar.  
+Usado en transferencia de archivos, administración remota y sistemas distribuidos.  
 
-TCP_Peer utiliza el protocolo TCP estándar para la comunicación. Es confiable y fácil de implementar para conexiones de red básicas.
-- Aplicaciones de transferencia de archivos que requieren fiabilidad en la entrega de datos.
-- Herramientas de administración remota donde la fiabilidad es más importante que la latencia.
-- Comunicación entre sistemas distribuidos que necesitan asegurar la entrega de mensajes.
+TCP is reliable and easy to implement.  
+Used in file transfers, remote administration, and distributed systems.  
 
-## Usos Útiles
+---
 
-1. **Juegos Multijugador**: Crea juegos que permitan a los jugadores conectarse y competir en tiempo real, ya sea en una red local o a través de Internet.
-2. **Aplicaciones de Chat**: Desarrolla aplicaciones de chat en tiempo real que permitan a los usuarios comunicarse instantáneamente.
-3. **Colaboración en Tiempo Real**: Facilita la colaboración en tiempo real en proyectos, como editores de texto colaborativos o aplicaciones de dibujo.
-4. **Intercambio de Archivos**: Implementa aplicaciones para el intercambio de archivos que aseguren la entrega fiable de datos.
-5. **Control Remoto**: Crea herramientas de administración y control remoto para gestionar dispositivos o sistemas distribuidos.
+## Usos Útiles / Useful Use Cases
+1. **Juegos Multijugador / Multiplayer Games**  
+2. **Aplicaciones de Chat / Chat Applications**  
+3. **Colaboración en Tiempo Real / Real-Time Collaboration**  
+4. **Intercambio de Archivos / File Sharing**  
+5. **Control Remoto / Remote Control**  
 
-## Contribuir
+---
 
-¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor, realiza un fork del repositorio, crea una rama con tus cambios y envía un pull request.
+## Contribuir / Contributing
+¡Las contribuciones son bienvenidas! Haz un fork, crea una rama y envía un pull request.  
 
-## Licencia
+Contributions are welcome! Fork the repository, create a branch, and submit a pull request.  
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+---
+
+## Licencia / License
+Este proyecto está bajo la **Licencia MIT**. Consulta el archivo `LICENSE`.  
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.  
